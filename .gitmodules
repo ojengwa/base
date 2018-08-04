@@ -1,0 +1,3 @@
+[submodule "scripts"]
+	path = bin
+	url = https://github.com/Seedstars/culture-scripts
