@@ -1,0 +1,69 @@
+{
+    "name": "base",
+    "description": "",
+    "scripts": {
+        "postdeploy": "bin/heroku_review_deploy.sh",
+        "pr-predestroy": "bin/heroku_review_destroy.sh"
+    },
+    "env": {
+        "ALLOWED_HOSTS": {
+            "description": "The allowed URLs for CORS handling",
+            "required": true
+        },
+        "CACHE_TIMEOUT": {
+            "description": "The default timeout for caching",
+            "required": false,
+            "value": 86400
+        },
+        "EMAIL_BACKEND": {
+            "description": "Which Email backend should be used?",
+            "value": "anymail.backends.sendgrid.SendGridBackend",
+            "required": true
+        },
+        "JWT_SECRET": {
+            "description": "The JWT Secret for the Encryption of JSON Web Tokens",
+            "generator": "secret"
+        },
+        "SECRET_KEY": {
+            "description": "The Secret Key for Django",
+            "generator": "secret"
+        },
+        "SECURE_SSL_REDIRECT": {
+            "description": "Should http always be redirected to https?",
+            "required": true
+        },
+        "SENDGRID_API_KEY": {
+            "description": "The Sendgrid API Key for sending emails",
+            "required": true
+        },
+        "SENTRY_DSN": {
+            "description": "The Sentry URL for working with the error monitoring solution",
+            "required": false
+        },
+        "STAGE": {
+            "description": "The stage of this environment (production, staging, testing)",
+            "value": "production",
+            "required": true
+        },
+        "STATIC_URL": {
+            "description": "the Static URL, can be set to a CDN with https://.../",
+            "required": true
+        },
+        "TENANT_DOMAIN": {
+            "description": "The domain, where tenants can get subdomains",
+            "required": true
+        }
+    },
+    "formation": {},
+    "addons": [
+    "cloudamqp",
+    "heroku-postgresql",
+    "heroku-redis",
+    "newrelic"
+  ],
+    "buildpacks": [
+        {
+            "url": "heroku/python"
+    }
+  ]
+}
