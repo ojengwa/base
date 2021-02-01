@@ -125,7 +125,7 @@ txaio==2.8.1
 typed-ast==1.1.0
 typing==3.6.4
 uritemplate==3.0.0
-urllib3==1.22
+urllib3==1.24.2
 vine==1.1.4
 wcwidth==0.1.7
 whitenoise==3.3.0
