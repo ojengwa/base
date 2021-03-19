@@ -42,7 +42,7 @@ django-rest-logger==1.0.2
 django-rest-swagger==2.1.2
 django-saas-email==0.1.0
 django-tinymce==2.6.0
-djangorestframework==3.8.2
+djangorestframework==3.11.2
 djangorestframework-jwt==1.11.0
 docopt==0.6.2
 dodgy==0.1.9
