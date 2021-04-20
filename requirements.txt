@@ -6,7 +6,7 @@ asgiref==1.1.2
 asn1crypto==0.22.0
 astroid==2.0.2
 attrs==17.2.0
-autobahn==17.7.1
+autobahn==20.12.3
 Automat==0.6.0
 bandit==1.4.0
 billiard==3.5.0.3
